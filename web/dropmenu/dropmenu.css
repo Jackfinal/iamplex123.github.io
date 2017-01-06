@@ -1,0 +1,52 @@
+@import url("/css/frameworks.css");
+/* 按钮 */
+.button {
+  padding: 6px 10px;
+  min-width: 120px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+.button-green {
+  color: #fff;
+  background: #6cc644;
+}
+/* 常用 */
+.nav > li {
+  float: left;
+}
+/* 下拉菜单 */
+.dropmenu {
+  position: relative;
+  display: inline-block;
+}
+.dropmenu:hover {
+  color: #000;
+}
+.dropmenu:hover ul {
+  display: block;
+}
+.dropmenu:hover .button {
+  cursor: pointer;
+}
+.dropmenu ul {
+  position: absolute;
+  display: none;
+  min-width: 118px;
+  border: 1px solid #ddd;
+}
+.dropmenu ul li {
+  text-align: center;
+}
+.dropmenu ul li a {
+  display: block;
+  padding: 0 15px;
+  height: 30px;
+  font-size: 14px;
+  color: #333;
+  line-height: 30px;
+}
+.dropmenu ul li a:hover {
+  background-color: #29e;
+  color: #fff;
+}

@@ -1,0 +1,59 @@
+.mx-dialog {
+  position: fixed;
+  background-color: #fff;
+  z-index: 10000;
+  border-radius: 3px;
+  box-shadow: 0 4px 23px 5px rgba(0,0,0,0.2), 0 2px 6px rgba(0,0,0,0.15);
+}
+.mx-dialog-title {
+  margin: 0 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+.mx-dialog-content {
+  position: relative;
+  padding: 25px;
+  overflow-y: auto;
+}
+.mx-dialog-button {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  font-size: 14px;
+  *font-size: 12px;
+}
+/* 图标 */
+.mx-dialog-loading {
+  position: relative;
+  top: 6;
+  background: url("img/ajax-loading-small-blue.gif");
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.mx-dialog-close {
+  background: url("img/IDR_CLOSE_DIALOG.png") 0 0 no-repeat;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+.mx-dialog-close:hover {
+  background: url("img/IDR_CLOSE_DIALOG_H.png");
+}
+.mx-dialog-close:active {
+  background: url("img/IDR_CLOSE_DIALOG_P.png");
+}
+/* 遮罩层*/
+.mx-dialog-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background-color: #ccc;
+  opacity: 0.7;
+  z-index: 9999;
+}
