@@ -31,6 +31,9 @@ ul {
 .hide {
   display: none;
 }
+.clear {
+  clear: both;
+}
 /* 按钮 */
 .button {
   padding: 6px 10px;
@@ -38,6 +41,7 @@ ul {
   font-size: 14px;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .button-blue {
   color: #fff;

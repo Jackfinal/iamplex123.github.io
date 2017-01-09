@@ -54,7 +54,6 @@
         }
 
         function scrollEvent( event ) {
-            console.log('??')
             var currentScrollY = getScrollY();
 
             if ( currentScrollY == lastScrollY )
