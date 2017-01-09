@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="/css/frameworks.css">
-	<link rel="stylesheet" type="text/css" href="dialog.css">
-</head>
-<body>
-
-</body>
-</html>
-<script src="/js/lib/jquery-1.11.1.js"></script>
-<script src="dialog.js"></script>
+<link rel="stylesheet" type="text/css" href="/components/dialog/dialog.css">
+<div>
+    <button type="button" class="button button-red" id="btn-diglog">对话框</button>
+</div>
+<script src="/components/dialog/dialog.js"></script>
 <script>
-$(function(){
-	dialog.init({
-		width:300,
-		height:300,
-		id:'heheda',
-		title:'dialog'
-	})
+$(function() {
+    $('#btn-diglog').on('click', function() {
+        dialog.init({
+            width: 300,
+            height: 300,
+            id: 'dialog',
+            title: 'dialog',
+            onSubmit: function() {
+                $('#dialog .mx-dialog-content').html('你点击了确定');
+            }
+        })
+    })
 })
-
 </script>
-<div id="heheda" class="hide">
-	stylus大法万岁
+<div id="dialog" class="hide">
+    dialog
 </div>

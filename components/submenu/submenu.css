@@ -11,33 +11,33 @@
   background: #6cc644;
 }
 /* 常用 */
-.nav > li {
+.submenu > li {
   float: left;
 }
 /* 下拉菜单 */
-.dropmenu {
+.submenu-item {
   position: relative;
   display: inline-block;
 }
-.dropmenu:hover {
+.submenu-item:hover {
   color: #000;
 }
-.dropmenu:hover ul {
+.submenu-item:hover ul {
   display: block;
 }
-.dropmenu:hover .button {
+.submenu-item:hover .button {
   cursor: pointer;
 }
-.dropmenu ul {
+.submenu-item ul {
   position: absolute;
   display: none;
   min-width: 118px;
   border: 1px solid #ddd;
 }
-.dropmenu ul li {
+.submenu-item ul li {
   text-align: center;
 }
-.dropmenu ul li a {
+.submenu-item ul li a {
   display: block;
   padding: 0 15px;
   height: 30px;
@@ -45,7 +45,7 @@
   color: #333;
   line-height: 30px;
 }
-.dropmenu ul li a:hover {
+.submenu-item ul li a:hover {
   background-color: #29e;
   color: #fff;
 }

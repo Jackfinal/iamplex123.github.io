@@ -1,0 +1,20 @@
+.nav {
+  float: left;
+  width: 210px;
+  font-size: 14px;
+}
+.components-section ul {
+  list-style: none;
+}
+.components-section ul li a {
+  color: #666;
+  line-height: 1.6;
+}
+.components-section ul li a.active {
+  color: #cc7a6f;
+}
+.inner-content {
+  float: left;
+  width: 100%;
+  max-width: 650px;
+}

@@ -4,13 +4,36 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/frameworks.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
-    <a href="components/dropmenu/dropmenu.html">下拉菜单</a>
-    <a href="components/dialog/dialog.html">对话框</a>
-    <a href="components/header/header.html">头部</a>
-    <a href="components/slider/slider.html">轮播</a>
+    <div class="container">
+        <div class="nav">
+            <div class="components-section">
+                <ul>
+                    <li><a href="/#/components/dialog/dialog">对话框</a></li>
+                    <li><a href="/#/components/header/header">头部</a></li>
+                    <li><a href="/#/components/slider/slider">轮播</a></li>
+                    <li><a href="/#/components/submenu/submenu">下拉菜单</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="inner-content"></div>
+    </div>
 </body>
 
 </html>
+<script src="/js/lib/jquery-1.11.1.js"></script>
+<script src="/js/lib/q.js"></script>
+<script>
+$('.nav').on('click', 'a', function() {
+    $(this)
+        .addClass('active')
+        .parent()
+        .siblings()
+        .children()
+        .removeClass('active');
+})
+</script>
