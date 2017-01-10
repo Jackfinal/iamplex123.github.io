@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/components/submenu/submenu.css">
 <div>
-    <ul class="submenu">
+    <ul class="submenu" style="display:none">
         <li class="submenu-item">
             <button type="button" class="button button-blue">父选项</button>
             <ul>
@@ -39,3 +39,8 @@
         </li>
     </ul>
 </div>
+<script>
+$(function() {
+    $('.submenu').show();
+})
+</script>
