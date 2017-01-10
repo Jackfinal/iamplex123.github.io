@@ -32,6 +32,8 @@
                  search = '',
                  url = '';
 
+             NProgress.start();
+
              if ( path ) {
                  search = path.split( '?' )[ 1 ];
                  url = path.split( '?' )[ 0 ] + '.html';
@@ -46,11 +48,11 @@
          toURL: function() {
              var path = q.getURL();
 
-             if ( !q.isFuckingBitch() )
-             // NProgress.start();
+             // if ( !q.isFuckingBitch() )
 
-                 $.get( path, function( data, textStatus ) {
+             $.get( path, function( data, textStatus ) {
                  mainContainer.html( data );
+                 NProgress.done();
              } );
          },
 
