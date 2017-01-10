@@ -29,20 +29,22 @@
      q = {
          getURL: function() {
              var path = location.hash.split( '#/' )[ 1 ],
-                 search = path.split( '?' )[ 1 ],
+                 search = '',
+                 url = '';
+
+             if ( path ) {
+                 search = path.split( '?' )[ 1 ];
                  url = path.split( '?' )[ 0 ] + '.html';
 
-             if ( search )
-                 url += '?' + search;
+                 if ( search )
+                     url += '?' + search;
+             }
 
              return url;
          },
 
          toURL: function() {
              var path = q.getURL();
-
-             if ( !path )
-                 location.href = '/#/components/dialog/dialog';
 
              if ( !q.isFuckingBitch() )
              // NProgress.start();
@@ -74,8 +76,10 @@
          }
 
          // 首次加载
-         if ( location.hash !== '' ) q.toURL();
-
+         if ( location.hash === '' )
+             location.href = '/#/components/header/header';
+         else
+             q.toURL();
      } );
 
      return q;

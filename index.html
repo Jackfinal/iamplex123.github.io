@@ -14,8 +14,8 @@
             <div class="components-section">
                 <span>杂项</span>
                 <ul>
-                    <li><a href="/#/components/dialog/dialog">对话框</a></li>
                     <li><a href="/#/components/header/header">头部</a></li>
+                    <li><a href="/#/components/dialog/dialog">对话框</a></li>
                     <li><a href="/#/components/slider/slider">轮播</a></li>
                     <li><a href="/#/components/submenu/submenu">下拉菜单</a></li>
                 </ul>
@@ -30,12 +30,27 @@
 <script src="/js/lib/jquery-1.11.1.js"></script>
 <script src="/js/lib/q.js"></script>
 <script>
-$('.nav').on('click', 'a', function() {
-    $(this)
-        .addClass('active')
-        .parent()
-        .siblings()
-        .children()
-        .removeClass('active');
+$(function() {
+    var currentURL = q.getURL();
+    console.log(currentURL)
+    $('.nav a').each(function() {
+        if (currentURL.indexOf($(this).prop('href').split('#/')[1]) > -1) {
+            $(this)
+                .addClass('active')
+                .parent()
+                .siblings()
+                .children()
+                .removeClass('active');
+        }
+    })
+
+    $('.nav').on('click', 'a', function() {
+        $(this)
+            .addClass('active')
+            .parent()
+            .siblings()
+            .children()
+            .removeClass('active');
+    })
 })
 </script>
