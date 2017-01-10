@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>前端常用代码</title>
     <link rel="stylesheet" type="text/css" href="/css/frameworks.css">
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
@@ -32,7 +32,7 @@
 <script>
 $(function() {
     var currentURL = q.getURL();
-    console.log(currentURL)
+
     $('.nav a').each(function() {
         if (currentURL.indexOf($(this).prop('href').split('#/')[1]) > -1) {
             $(this)
