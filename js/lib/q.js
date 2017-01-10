@@ -41,10 +41,13 @@
          toURL: function() {
              var path = q.getURL();
 
-             if ( !q.isFuckingBitch() )
-                 // NProgress.start();
+             if ( !path )
+                 location.href = '/#/components/dialog/dialog';
 
-             $.get( path, function( data, textStatus ) {
+             if ( !q.isFuckingBitch() )
+             // NProgress.start();
+
+                 $.get( path, function( data, textStatus ) {
                  mainContainer.html( data );
              } );
          },
