@@ -3,23 +3,35 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>前端常用代码列表</title>
+    <title>大杂烩</title>
     <link rel="stylesheet" href="/css/frameworks.css">
     <link rel="stylesheet" href="/js/plugins/nprogress/nprogress.css">
-    <link rel="stylesheet" href="/components/submenu/submenu.css">
+    <link rel="stylesheet" href="/demo/submenu/submenu.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="container">
         <div class="nav">
-            <div class="components-section">
-                <span>杂项</span>
+            <div class="demo-section">
+                <span>其它</span>
+                <ul>
+                    <li><a href="/#/demo/flv/flv">HTML5-video与flv.js</a></li>
+                </ul>
+            </div>
+            <div class="demo-section">
+                <span>组件</span>
                 <ul>
                     <li><a href="/#/demo/header/header">header</a></li>
-                    <li><a href="/#/components/dialog/dialog">dialog</a></li>
-                    <li><a href="/#/components/slider/slider">slider</a></li>
-                    <li><a href="/#/components/submenu/submenu">submenu</a></li>
+                    <li><a href="/#/demo/slider/slider">slider</a></li>
+                    <li><a href="/#/demo/dialog/dialog">dialog</a></li>
+                </ul>
+            </div>
+            <div class="demo-section">
+                <span>样式</span>
+                <ul>
+                    <li><a href="/#/demo/submenu/submenu">submenu</a></li>
+                    <li><a href="/#/demo/title/title">title</a></li>
                 </ul>
             </div>
         </div>
@@ -38,22 +50,14 @@ $(function() {
 
     $('.nav a').each(function() {
         if (currentURL.indexOf($(this).prop('href').split('#/')[1]) > -1) {
-            $(this)
-                .addClass('active')
-                .parent()
-                .siblings()
-                .children()
-                .removeClass('active');
+            $('.nav a').removeClass('active');
+            $(this).addClass('active');
         }
     })
 
     $('.nav').on('click', 'a', function() {
-        $(this)
-            .addClass('active')
-            .parent()
-            .siblings()
-            .children()
-            .removeClass('active');
+        $('.nav a').removeClass('active');
+        $(this).addClass('active')
     })
 })
 </script>

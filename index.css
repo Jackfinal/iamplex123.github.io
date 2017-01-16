@@ -3,18 +3,18 @@
   width: 210px;
   font-size: 14px;
 }
-.components-section span {
+.demo-section span {
   display: inline-block;
   margin: 10px 0;
 }
-.components-section ul {
+.demo-section ul {
   list-style: none;
 }
-.components-section ul li a {
+.demo-section ul li a {
   color: #666;
   line-height: 1.6;
 }
-.components-section ul li a.active {
+.demo-section ul li a.active {
   color: #cc7a6f;
 }
 .inner-content {

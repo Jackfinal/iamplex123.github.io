@@ -46,11 +46,11 @@
          },
 
          toURL: function() {
-             var path = q.getURL();
+             var url = q.getURL();
 
              // if ( !q.isFuckingBitch() )
 
-             $.get( path, function( data, textStatus ) {
+             $.get( url, function( data, textStatus ) {
                  mainContainer.html( data );
                  NProgress.done();
              } );
@@ -79,7 +79,7 @@
 
          // 首次加载
          if ( location.hash === '' )
-             location.href = '/#/components/header/header';
+             location.href = '/#/demo/flv/flv';
          else
              q.toURL();
      } );
