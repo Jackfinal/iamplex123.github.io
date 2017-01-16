@@ -8,12 +8,11 @@ if (flvjs.isSupported()) {
     var videoElement = document.getElementById('videoElement');
     var flvPlayer = flvjs.createPlayer({
         type: 'flv',
-        url: 'http://113.12.66.76:89/upfiles/m/2.flv',
         cors: true
+        url: 'http://113.12.66.76:89/upfiles/m/2.flv',
     });
     flvPlayer.attachMediaElement(videoElement);
     flvPlayer.load();
-
     flvPlayer.play();
 }
 </script>
