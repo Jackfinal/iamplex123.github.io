@@ -4,14 +4,15 @@
 <p style="font-size:18px;margin-top:20px;">HTML5支持MP4、WebM、Ogg。不支持flv</p>
 <video src="http://113.12.66.76:89/upfiles/m/1.mp4" style="width:690px;" autoplay="true" controls="true"></video>
 <script>
-// if (flvjs.isSupported()) {
-//     var videoElement = document.getElementById('videoElement');
-//     var flvPlayer = flvjs.createPlayer({
-//         type: 'flv',
-//         url: '/demo/flv/《余文乐的灵与肉》之内心篇_超清.flv'
-//     });
-//     flvPlayer.attachMediaElement(videoElement);
-//     flvPlayer.load();
-//     flvPlayer.play();
-// }
+if (flvjs.isSupported()) {
+    var videoElement = document.getElementById('videoElement');
+    var flvPlayer = flvjs.createPlayer({
+        type: 'flv',
+        url: 'http://113.12.66.76:89/upfiles/m/2.flv',
+        cors: true
+    });
+    flvPlayer.attachMediaElement(videoElement);
+    flvPlayer.load();
+    flvPlayer.play();
+}
 </script>
